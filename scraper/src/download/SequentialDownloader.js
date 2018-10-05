@@ -10,25 +10,19 @@ const SequentialDownloader = {
         this.onProgress = onProgress;
         this.results = [];
     },
-    downloadAll() {
-        const done = new Promise(resolve => this.resolve = resolve);
+    async downloadAll() {
+        let page = '';
+        const results = [];
 
-        this.downloadNext();
+        do {
+            page = await this.Downloader.next();
 
-        return done;
-    },
-    async downloadNext() {
-        const downloadResult = await this.Downloader.next();
+            this.onProgress(page);
 
-        this.onProgress(downloadResult)
+            this.results.push(page);
+        } while (this.hasNext(page));
 
-        this.results.push(downloadResult.page);
-
-        if (!hasNext) {
-            this.resolve(this.results);
-        } else {
-            this.downloadNext();
-        }
+        return results;
     },
     hasNext(page) {
         const $ = cheerio.load(page);
