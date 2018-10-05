@@ -1,11 +1,19 @@
 const { ratingNames } = require('./Ratings');
 
 function scrapeComment($, $commentRow) {
-    return $('br', $commentRow)[0].next.data.trim();
+    try {
+        return $('br', $commentRow)[0].next.data.trim();
+    } catch {
+        return '';
+    }
 }
 
 function scrapeCourse($, $commentRow) {
-    return $('strong', $commentRow)[0].firstChild.data;
+    try {
+        return $('strong', $commentRow)[0].firstChild.data;
+    } catch {
+        return '';
+    }
 }
 
 function scrapeRatings($, $ratingRow) {

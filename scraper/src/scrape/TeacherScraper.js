@@ -39,9 +39,13 @@ function scrapeCourses($) {
         return false;
     })[0];
 
-    const coursesText = $coursesLabelSpan.next.next.next.firstChild.data;
+    try {
+        const coursesText = $coursesLabelSpan.next.next.next.firstChild.data;
 
-    return coursesText.split(',').map(str => str.trim());
+        return coursesText.split(',').map(str => str.trim());
+    } catch (err) {
+        return [];
+    }
 }
 
 function scrapeRatings($) {

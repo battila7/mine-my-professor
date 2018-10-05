@@ -1,6 +1,6 @@
 const cheerio = require('cheerio');
 
-const uriIdPattern = /\/tanar\/adatlap\/(\d+)\.html/g;
+const uriIdPattern = /\/tanar\/adatlap\/(\d+)\.html/;
 
 function extractId(uri) {
     const results = uriIdPattern.exec(uri);
@@ -21,12 +21,12 @@ module.exports = function scrape(contents) {
         const href = $(this).attr('href');
 
         if (!href.startsWith('/oldalajanlo')) {
-            const id = extractId(uri);
+            const id = extractId(href);
 
             if (id) {
                 teachers.push({
                     id,
-                    name
+                    name: this.firstChild.data.trim()
                 });
             }
         }

@@ -8,18 +8,18 @@ const Downloader = {
     async next() {
         this.lastIndex++;
 
-        const uri = () => {
+        const uri = (() => {
             if (this.lastIndex == 1) {
                 return this.baseUri;
             } else {
                 return `${this.baseUri}?p=${this.lastIndex}`;
             }
-        };
+        })();
 
-        const contents = await axios.get(uri);
+        const response = await axios.get(uri);
 
         return {
-            contents,
+            contents: response.data,
             index: this.lastIndex,
             uri
         };

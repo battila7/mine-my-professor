@@ -1,3 +1,5 @@
+const AxiosDownloader = require('../download/AxiosDownloader');
+const ZombieDownloader = require('../download/ZombieDownloader');
 const SequentialDownloader = require('../download/SequentialDownloader')
 const TeacherScraper = require('../scrape/TeacherScraper');
 
@@ -7,8 +9,11 @@ const TeacherMiner = {
         this.id = id;
         this.onProgress = onProgress;
 
+        const ad = Object.create(AxiosDownloader);
+        ad.Downloader(`http://www.markmyprofessor.com/tanar/adatlap/${this.id}.html`);
+
         this.downloader = Object.create(SequentialDownloader);
-        this.downloader.SequentialDownloader(`http://www.markmyprofessor.com/tanar/adatlap/${this.id}.html`, this.downloaderOnProgress);
+        this.downloader.SequentialDownloader(this.downloaderOnProgress.bind(this), ad);
 
         this.data = {
             name,
@@ -18,10 +23,10 @@ const TeacherMiner = {
     },
     mine() {
         return this.downloader.downloadAll()
-            .then(this.data);
+            .then(() => this.data);
     },
     downloaderOnProgress(page) {
-        const scrapingResults = TeacherScraper(page);
+        const scrapingResults = TeacherScraper(page.contents);
 
         if (!this.data.overall) {
             this.data.overall = {

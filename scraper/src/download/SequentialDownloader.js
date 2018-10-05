@@ -1,12 +1,8 @@
 const cheerio = require('cheerio');
 
-const Downloader = require('./Downloader');
-
 const SequentialDownloader = {
-    SequentialDownloader(baseUri, onProgress) {
-        this.baseUri = baseUri;
-        this.Downloader = Object.create(Downloader);
-        this.Downloader.Downloader(this.baseUri);
+    SequentialDownloader(onProgress, downloader) {
+        this.downloader = downloader;
         this.onProgress = onProgress;
         this.results = [];
     },
@@ -15,17 +11,17 @@ const SequentialDownloader = {
         const results = [];
 
         do {
-            page = await this.Downloader.next();
+            page = await this.downloader.next();
 
             this.onProgress(page);
 
             this.results.push(page);
-        } while (this.hasNext(page));
+        } while (this.hasNext(page.contents));
 
         return results;
     },
-    hasNext(page) {
-        const $ = cheerio.load(page);
+    hasNext(contents) {
+        const $ = cheerio.load(contents);
 
         return $('a.nextlink').length == 1;
     }
