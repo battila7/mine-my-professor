@@ -20,7 +20,7 @@ const SequentialDownloader = {
     async downloadNext() {
         const downloadResult = await this.Downloader.next();
 
-        onProgress(downloadResult)
+        this.onProgress(downloadResult)
 
         this.results.push(downloadResult.page);
 
@@ -36,3 +36,5 @@ const SequentialDownloader = {
         return $('a.nextlink').length == 1;
     }
 }
+
+module.exports = SequentialDownloader;
