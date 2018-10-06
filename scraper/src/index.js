@@ -1,54 +1,33 @@
-const SchoolMiner = require('./mine/SchoolMiner');
-const TeacherMiner = require('./mine/TeacherMiner');
 const { writeFileSync } = require('fs');
+const { mineSchool, mineTeachers } = require('leadMiner.js');
 
-const DEIK = 'DE IK';
-const DEIK_ID = 39;
+const options = require('./cli');
 
-const TEACHER_BATCH_SIZE = 5;
+(async function mineMyProfessor(options) {
+    const dataset = await mineDataset(options);
 
-function mineDEIK() {
-    const schoolMiner = Object.create(SchoolMiner);
-    schoolMiner.SchoolMiner(DEIK, DEIK_ID);
-
-    return schoolMiner.mine();
-}
-
-async function mineTeachers(entries) {
-    const results = [];
-
-    for (let i = 0; i < entries.length; i += TEACHER_BATCH_SIZE) {
-        const endIndex = Math.min(entries.length, i + TEACHER_BATCH_SIZE);
-
-        const batch = entries.slice(i, endIndex);
-
-        const batchMinePromises = batch.map(({name, id}) => {
-            const miner = Object.create(TeacherMiner);
-            miner.TeacherMiner(name, id);
-
-            return miner.mine()
-                .then(data => results.push(data));
-        });
-
-        await Promise.all(batchMinePromises);
-
-        console.log(`Loaded batch ${i + 1}-${endIndex + 1}`);
+    let outputString;
+    if (options.prettyPrint) {
+        outputString = JSON.stringify(dataset, null, 4);
+    }  else {
+        outputString = JSON.stringify(dataset);
     }
 
-    return results;
-};
+    writeFileSync(options.outputPath, outputString);
+})(options);
 
-(async function mineMyProfessor() {
+async function mineDataset({ school, teacherBatchSize }) {
     console.log('Collecting teacher data...');
+    const schoolData = await mineSchool(options.school);
+    console.log(`${schoolData.teachers.length} teacher entries collected.`);
 
-    const deikData = await mineDEIK();
-    writeFileSync('./deik.json', JSON.stringify(deikData, null, 4));
+    const teacherData = await mineTeachers(teacherBatchSize, schoolData.teachers);
 
-    console.log(`${deikData.teachers.length} entries collected.`);
-    
-    const data = await mineTeachers(deikData.teachers);
-    writeFileSync("./dataset.json", JSON.stringify(data));
-    writeFileSync('./formatted.json', JSON.stringify(data, null, 4));
-})();
+    return {
+        name: school.name,
+        id: school.id,
+        teachers: teacherData
+    };
+}
 
 process.on('unhandledRejection', err => console.log(err));
