@@ -1,17 +1,22 @@
 const cheerio = require('cheerio');
 
+const { get } = require('./Downloader');
+
+const FORWARD_LINK_SELECTOR = 'a.nextlink';
+
 const SequentialDownloader = {
-    SequentialDownloader(onProgress, downloader) {
-        this.downloader = downloader;
+    SequentialDownloader(baseUri, onProgress) {
+        this.baseUri = baseUri;
         this.onProgress = onProgress;
-        this.results = [];
+
+        this.lastIndex = 0;
     },
     async downloadAll() {
         let page = '';
         const results = [];
 
         do {
-            page = await this.downloader.next();
+            page = await get(this.nextUri());
 
             this.onProgress(page);
 
@@ -23,7 +28,16 @@ const SequentialDownloader = {
     hasNext(contents) {
         const $ = cheerio.load(contents);
 
-        return $('a.nextlink').length == 1;
+        return $(FORWARD_LINK_SELECTOR).length == 1;
+    },
+    nextUri() {
+        this.lastIndex++;
+
+        if (this.lastIndex == 1) {
+            return this.baseUri;
+        } else {
+            return `${this.baseUri}?p=${this.lastIndex}`;
+        }
     }
 }
 
