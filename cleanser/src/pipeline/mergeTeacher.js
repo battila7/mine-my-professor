@@ -1,6 +1,5 @@
 function process({ read, write },  { rulesPath, outputPath }, initialDataset) {
     const rules = read(rulesPath);
-    console.log(rules);
 
     let mergedTeachers = createMergedTeachers(rules, initialDataset.teachers);
 
@@ -15,8 +14,6 @@ function process({ read, write },  { rulesPath, outputPath }, initialDataset) {
     if (outputPath) {
         write(outputPath, outputDataset);
     }
-
-    console.log(outputDataset);
     
     return outputDataset;
 };

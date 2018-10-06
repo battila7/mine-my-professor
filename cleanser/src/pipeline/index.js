@@ -1,6 +1,7 @@
 const stages = [
     'removePrefix',
-    'mergeTeacher'
+    'mergeTeacher',
+    'mergeCourse'
 ];
 
 function process(options, initialDataset) {

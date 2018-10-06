@@ -25,7 +25,7 @@
     },
     {
         "mergeName": "Mesterséges intelligencia",
-        "names": ["Mesterséges intelligencia", "Mesterséges", "Mestersége", "mestint", "Mestint", "Mesterséges Intelligencia", "Mesterséges Inteligencia", "Mesterséges Intelligencia+logika", "mest int", "Mestint"]
+        "names": ["Mesterséges intelligencia", "Mesterséges", "Mestersége", "mestint", "Mestint", "Mesterséges Intelligencia", "Mesterséges Inteligencia", "Mesterséges Intelligencia+logika", "mest int", "Mestint", "mestersége"]
     },
     {
         "mergeName": "Az informatika logikai alapjai",
@@ -37,7 +37,7 @@
     },
     {
         "mergeName": "Operációs rendszerek",
-        "names": ["Operációs rendszerek", "Operációs rendszerek 2", "Op rendszerek", "Operációs rendszerek 1", "Operációs rendszerek 1.", "Oprendszer 1", "Oprendszer 2", "Operácios Rendszerek 1", "oprendszerek"]
+        "names": ["Operációs rendszerek", "Operációs rendszerek 2", "Op rendszerek", "Operációs rendszerek 1", "Operációs rendszerek 1.", "Oprendszer 1", "Oprendszer 2", "Operácios Rendszerek 1", "oprendszerek", "Operációs Rendszerek 2"]
     },
     {
         "mergeName": "Bevezetés az informatikába",
@@ -68,8 +68,8 @@
         "names": ["Bevezetés a LabView programozásba", "Bevezetés a labview programozásba", "LabVIEW"]
     },
     {
-        "mergeName": "XML, HTML",
-        "names": ["Xml/html", "XML", "HTML, XML", "HTML/XML", "XML HTML", "xml"]
+        "mergeName": "HTML, XML",
+        "names": ["Xml/html", "XML", "HTML, XML", "HTML/XML", "XML HTML", "xml", "XML, HTML"]
     },
     {
         "mergeName": "Szakdolgozat",
