@@ -1,0 +1,378 @@
+[
+    {
+        "mergeName": "Statisztika",
+        "names": ["stat2", "statisztika 2", "Statisztika 2", "statisztika 2.", "Statisztika 2.", "Statisztika II.", "stat1", "statisztika 1", "Statisztika 1", "statisztika 1.", "Statisztika 1.", "Statisztika I.", "Statisztika", "statisztika"]
+    },
+    {
+        "mergeName": "Pénzügyi matematika",
+        "names": ["Pénzügyi matematika", "pü.matematika", "Pénzügyi"]
+    },
+    {
+        "mergeName": "Kalkulus",
+        "names": ["Kalkulus 1", "Kalkulus 1.", "Kalkulus 1/2", "Kalkulus 1-2", "Kalkulus I-II", "kalk1", "kalkulus", "kalkulus gyak", "Kalkulus", "Kalkulus gyak", "Kalkulus 2", "kalkulus2", "kalkulus 2"]
+    },
+    {
+        "mergeName": "Vállalati pénzügyek",
+        "names": ["Vállalati pénzügyek 1", "Vállalati pénzügyek"]
+    },
+    {
+        "mergeName": "Adatszerkezetek és algoritmusok",
+        "names": ["Adatszerkezetek és algoritmusok", "Adatszerkezetek", "adatszerk", "adatszerkezetek és algoritmusok", "Adatszerk", "Adatszerk, Prog2, Adatb", "prog1, adatbazis, adatszerk", "adatszerkezetek", "adszerk"]
+    },
+    {
+        "mergeName": "Bevezetés a Python programozási nyelvbe",
+        "names": ["Bevezetés a Python programozási nyelvbe", "python", "Python"]
+    },
+    {
+        "mergeName": "Mesterséges intelligencia",
+        "names": ["Mesterséges intelligencia", "Mesterséges", "Mestersége", "mestint", "Mestint", "Mesterséges Intelligencia", "Mesterséges Inteligencia", "Mesterséges Intelligencia+logika", "mest int", "Mestint"]
+    },
+    {
+        "mergeName": "Az informatika logikai alapjai",
+        "names": ["Az informatika logikai alapjai", "logika", "informatika logikai alapjai", "Logika", "Informatika logikai alapjai", "Informatikai Logika Alapjai", "info log alapok"]
+    },
+    {
+        "mergeName": "NoSQL",
+        "names": ["NoSQL", "noSql (yesPython)", "NoSQL (but Python3)"]
+    },
+    {
+        "mergeName": "Operációs rendszerek",
+        "names": ["Operációs rendszerek", "Operációs rendszerek 2", "Op rendszerek", "Operációs rendszerek 1", "Operációs rendszerek 1.", "Oprendszer 1", "Oprendszer 2", "Operácios Rendszerek 1", "oprendszerek"]
+    },
+    {
+        "mergeName": "Bevezetés az informatikába",
+        "names": ["Bevezetés az informatikába", "bevezetés az informatikába", "Bev Info", "bevinfó", "Bev.Infó", "bevinfo", "BevInfó", "Bevinfó", "Bevinfo gyak", "Bevezetés az Informatikába", "Bev_info"]
+    },
+    {
+        "mergeName": "Adatbázisrendszerek",
+        "names": ["Adatbázisrendszerek", "adatbázisrendszerek", "Adatbázis", "Adatbázis rendszerek", "adatbázis", "adatb"]
+    },
+    {
+        "mergeName": "Alkalmazott statisztika",
+        "names": ["Alkalmazott statisztika", "alkalmazott statisztika"]
+    },
+    {
+        "mergeName": "Valószínűségszámítás és statisztika",
+        "names": ["Valószínűségszámítás és statisztika", "Válószínűség számítás és statisztika", "Valószinűségszámitás és statisztika", "Valószínűségszámítás és matematikai statisztika"]
+    },
+    {
+        "mergeName": "Távközlő hálózatok",
+        "names": ["Távközlő hálóatok", "Távközlő"]
+    },
+    {
+        "mergeName": "FPGA programozás",
+        "names": ["FPGA programozás", "FPGA"]
+    },
+    {
+        "mergeName": "Bevezetés a LabView programozásba",
+        "names": ["Bevezetés a LabView programozásba", "Bevezetés a labview programozásba", "LabVIEW"]
+    },
+    {
+        "mergeName": "XML, HTML",
+        "names": ["Xml/html", "XML", "HTML, XML", "HTML/XML", "XML HTML", "xml"]
+    },
+    {
+        "mergeName": "Szakdolgozat",
+        "names": ["Szakdolgozat", "szakdolgozat", "szakdolgozati konzultáció"]
+    },
+    {
+        "mergeName": "Cisco",
+        "names": ["Cisco", "Háló, Cisco I, Cisco II"]
+    },
+    {
+        "mergeName": "Hálózati architektúrák és protokollok",
+        "names": ["Hálózati architektúrák és protokollok", "hálózati architektúrák és protokollok", "Hálózati architektúrák és prtookollok", "Hálózati Architektúrák gyakorlat", "Hálózati architektúrák", "Hálózati", "Hálózatok és architektúrák"] 
+    },
+    {
+        "mergeName": "Fordítóprogramok",
+        "names": ["Fordítóprogramok", "fordprog", "Fordprog"]
+    },
+    {
+        "mergeName": "A gépi tanulás alapjai",
+        "names": ["A gépi tanulás alapjai", "ml-basics", "Gépi tancsi"]
+    },
+    {
+        "mergeName": "Bevezetés a számítógépi grafikába",
+        "names": ["Bevezetés a számítógépi grafikába", "Bevgraf", "bevgraf", "BevGraf", "Komputergrafika, Bevezetés a számítógépi grafikába"]
+    },
+    {
+        "mergeName": "Neurális hálók",
+        "names": ["Neurális hálók", "Neurális Hálók", "neurális hálózatok"]
+    },
+    {
+        "mergeName": "Magasszintű programozási nyelvek",
+        "names": ["Magasszintű Programozási Nyelvek 1", "Magasszintű Programozási Nyelvek 2", "Prog2", "prog2", "Prog1","prog1, prog2", "Magas szintű programozási nyelvek 1.", "proglab", "Proglabor1", "prog labor", "Magasszintű programozási nyelvek", "Magasszintű programozási nyelvek 2.", "Proglabor", "Prog. Labor 2", "Prog 1", "Magasszintű", "PROG2", "Magas szintű programozási nyelvek", "magas szintű programozás 1", "magas szintű programozás 2", "prog", "Magasszintű programozási nyelvek 2", "Magasszintű programozási nyelvek II", "Magasszintű programozási  nyelvek 1", "UDPROG", "Magasszintű programozási nyelvek I", "Magasszintű programozási nyelvek 1", "prog1", "Magas szintű programozási nyelvek 2"]
+    },
+    {
+        "mergeName": "Diszkrét matematika",
+        "names": ["Diszkrét matematika", "Dimat 1-2", "diszkrét matematika", "Diszkrét matematika 1", "Diszkrét matematika 2", "Diszkrét Matematika 1", "Diszkrét", "Dimat 1", "Dimat 2", "dimat", "Diszkrét Matematika", "dimat-2","Dimat2"]
+    },
+    {
+        "mergeName": "Az informatikai matematika alapjai",
+        "names": ["Az informatika matematikai alapjai 2", "Az informatika matematikai alapjai 1", "Az informatika matematikai alapjai 1-2", "Az informatika matematikai alapjai"]
+    },
+    {
+        "mergeName": "Gazdasági matematika",
+        "names": ["Gazdasági matematika", "Gazdasági matek", "Gazdasági Matematika 1", "gazdasági matematika2", "gazdasági matematika", "Gazdasági matematika I.", "gazdasági matematika 2", "gazdasági matematika 1", "Gazdasági matematika 1", "Gazdasági matematika II.", "gazdasági matematika 1.", "Gazdasági Matematika I.", "Gazdasági matematika", "Gazdasági matematika 2."]
+    },
+    {
+        "mergeName": "Biomatematika",
+        "names": ["Biomatematika", "biomatematika"]
+    },
+    {
+        "mergeName": "Adatkezelés",
+        "names": ["Adatkezelés", "adatk"]
+    },
+    {
+        "mergeName": "Térinformatika",
+        "names": ["Térinformatika", "Térinformatika (MSc)", "Térinfo"]
+    },
+    {
+        "mergeName": "Numerikus módszerek",
+        "names": ["Numerikus módszerek", "numerikus módszerek", "Numerikus Módszerek", "Numerikus modszerek"]
+    },
+    {
+        "mergeName": "Elekntronikus oktatási környezetek",
+        "names": ["elektronikus oktatási körny."]
+    },
+    {
+        "mergeName": "Információelmélet",
+        "names": ["Információelmélet (GI)", "Információ- és kódelmélet", "Infoelmélet"]
+    },
+    {
+        "mergeName": "Sztochasztikus folyamatok",
+        "names": ["sztochasztikus folyamatok"]
+    },
+    {
+        "mergeName": "Sztochasztikus modellezés",
+        "names": ["Sztohasztikus modellezés 2"]
+    },
+    {
+        "mergeName": "Valószínűségszámítás és statisztika",
+        "names": ["Valószínűségszámítás", "Valseg", "valség"]
+    },
+    {
+        "mergeName": "Bibliográfiai adatfeldolgozás",
+        "names": ["Bibliográfiai adatfeldolgozás 2", "Bibliográfiai  adatfeldolgozás 2", "bibliográfiai adatfeldolgozás", "Bibliográfiai adatfeldolgozás", "Bibliográfia", "Bibliográfiai adatfeldolgozás II."]
+    },
+    {
+        "mergeName": "Alkalmazott matematika",
+        "names": ["Alkalmazott matematika", "alkalmazott matematika"]
+    },
+    {
+        "mergeName": "Tartalomszolgáltatás",
+        "names": ["Tartalomszolgáltatás", "tartalomszolgáltatás"]
+    },
+    {
+        "mergeName": "Numerikus matematika",
+        "names": ["Numerikus matematika", "Nummerikus matematika", "Nummerikus Matematika"]
+    },
+    {
+        "mergeName": "Kriptográfia",
+        "names": ["Kriptográfia", "Kriptográfia 2"]
+    },
+    {
+        "mergeName": "Programozás Java nyelven",
+        "names": ["Programozás Java nyelven I.", "Programozás Java nyelven 2 (gyakorlat)", "Programozás Java nyelven 1", "Programozás JAVA nyelven 2", "Java programozás", "Java"]
+    },
+    {
+        "mergeName": "Kombinatorika és valószínűségszámítás",
+        "names": ["Kombinatorika és valség"]
+    },
+    {
+        "mergeName": "Matematika",
+        "names": ["Matematika", "Matematika 2", "Matematika szigorlat"]
+    },
+    {
+        "mergeName": "Számítógép architektúrák",
+        "names": ["Számítógép architektúrák", "Számítógép Architektúrák", "Számítógépes architektúrák"]
+    },
+    {
+        "mergeName": "Makroökonómia",
+        "names": ["Makroökonómia", "makroökonómia"]
+    },
+    {
+        "mergeName": "Mikroökonómia",
+        "names": ["Mikroökonómia", "mikroökonómia"]
+    },
+    {
+        "mergeName": "Szoftverfejlesztés mobil eszközökre",
+        "names": ["Mobil programozás", "mobil prog", "Szoftverfejlesztés mobil eszközökre"]
+    },
+    {
+        "mergeName": "Számításelmélet",
+        "names": ["számításelmélet"]
+    },
+    {
+        "mergeName": "Mesterséges intelligencia nyelvek",
+        "names": ["Mesterséges Intelligencia Nyelvek"]
+    },
+    {
+        "mergeName": "A logika és számítástudomány alapjai",
+        "names": ["Logika és Számítástudomány alapjai"]
+    },
+    {
+        "mergeName": "A matematikai logika alapjai",
+        "names": ["Matematikai Logika Alapjai"]
+    },
+    {
+        "mergeName": "Szövegfeldolgozás",
+        "names": ["szövegfeldolgozás", "szövegfeldolgozás 2"]
+    },
+    {
+        "mergeName": "Információs rendszerek",
+        "names": ["információs rendszerek", "Információs rendszerek 2.", "Információs"]
+    },
+    {
+        "mergeName": "Formális nyelvek és automaták",
+        "names": ["Formális nyelvek és automaták", "Formális nyelvek és autómaták", "Automaták és formális nyelvek", "Nyelvek és automaták"]
+    },
+    {
+        "mergeName": "A pszichológia főbb területei",
+        "names": ["A pszichológia főbb területei", "Pszichológia főbb területei", "pszichológia"]
+    },
+    {
+        "mergeName": "Tudásalapú rendszerek",
+        "names": ["Tudásalapú rendszerek", "Tudásalapú"]
+    },
+    {
+        "mergeName": "Multimédia",
+        "names": ["Multimédia", "multimédia"]
+    },
+    {
+        "mergeName": "Adatbáziskezelés",
+        "names": ["Adatbáziskezelés", "adatbázis kezelés"]
+    },
+    {
+        "mergeName": "Adatbiztonság",
+        "names": ["Adatbiztonság", "adatbiztonság"]
+    },
+    {
+        "mergeName": "Könyvtártan",
+        "names": ["Könyvtártan", "Könyvtártan 3", "könyvtártan"]
+    },
+    {
+        "mergeName": "Információkereső nyelvek",
+        "names": ["Információkereső nyelvek", "Információ kereső nyelvek", "Információkereső nyelvek 2", "információ kereső nyelvek"]
+    },
+    {
+        "mergeName": "Irányítástechnika",
+        "names": ["Irányitástechnika"]
+    },
+    {
+        "mergeName": "Programozási technológiák",
+        "names": ["Programozási technológiák", "programozás-technika", "Programozás technológiák"]
+    },
+    {
+        "mergeName": "Filozófiatörténet",
+        "names": ["Filozófiatörténet", "filozófia történet"]
+    },
+    {
+        "mergeName": "Harverközeli programozás",
+        "names": ["hardverközeliprogramozás2", "Hardverközeli", "Hardverközeli programoás 1", "Hardware Közeli Programozás 2", "Hardverközeli programozás 1", "hardverközeli programozás 2"]
+    },
+    {
+        "mergeName": "Ábrázoló geometria",
+        "names": ["Ábrázoló"]
+    },
+    {
+        "mergeName": "Elektronika",
+        "names": ["Elektronika", "Elektronika 1"]
+    },
+    {
+        "mergeName": "Tájékoztatás, információforrások",
+        "names": ["Tájékoztatás, információforrások 1", "tájékoztatás és információforrások", "Tájékoztatás 3", "Tájékoztatás 1"]
+    },
+    {
+        "mergeName": "Fejezetek a könyvtár- és információtudományból",
+        "names": ["Fejezetek a könyvtár- és információtudományból", "Fejezetek a könyvtárinformatikából"]
+    },
+    {
+        "mergeName": "Elektronikai áramkörök szimulációja",
+        "names": ["Elektronikai áramkörök szimulációja", "Áramkörök szimulációja"]
+    },
+    {
+        "mergeName": "Algoritmusok",
+        "names": ["Algorimtusok"]
+    },
+    {
+        "mergeName": "Vállalatgazdaságtan",
+        "names": ["Vállalatgazdaságtan", "vállgazd"]
+    },
+    {
+        "mergeName": "Opcióértékelés",
+        "names": ["opcióértékelés"]
+    },
+    {
+        "mergeName": "Híradástechnika",
+        "names": ["híradástechnika"]
+    },
+    {
+        "mergeName": "webes alkalmazások",
+        "names": ["Webes alkalmazások"]
+    },
+    {
+        "mergeName": "Írás-, könyv-, sajtó- és könyvtártörténet",
+        "names": ["Írás-, könyv-, sajtó- és könyvtártörténet 2", "írás könyv sajtó könyvtártörténet", "írás könyv sajtó könyvtárttörténet"]
+    },
+    {
+        "mergeName": "Leíró- és jelölő nyelvek",
+        "names": ["Leíró jelölő nyelvek"]
+    },
+    {
+        "mergeName": "Számvitel",
+        "names": ["Számvitel 1", "Számvitel I-II"]
+    },
+    {
+        "mergeName": "A digitális képfeldolgozás matematikai alapjai",
+        "names": ["a digitális képfeldolgozás matematikai alapjai"]
+    },
+    {
+        "mergeName": "Infokommunikáció",
+        "names": ["infokommunikáció"]
+    },
+    {
+        "mergeName": "Társadalomismeret",
+        "names": ["társadalom ismeret"]
+    },
+    {
+        "mergeName": "Műszaki képfeldolgozás LabView-val",
+        "names": ["Műszaki képfeldolgozás LabView-val", "Műszaki képfeldolgozás"]
+    },
+    {
+        "mergeName": "Számítástechnika",
+        "names": ["Számítástechnika I."]
+    },
+    {
+        "mergeName": "Dinamikus weblapok készítése",
+        "names": ["Dinamikus weblapok szerkesztése", "Dinamikus weblapok készítése"]
+    },
+    {
+        "mergeName": "Az informatika tanítása",
+        "names": ["Az informatika tanítása 1."]
+    },
+    {
+        "mergeName": "Adatbázis adminsztráció",
+        "names": ["dba"]
+    },
+    {
+        "mergeName": "Hálózati ismeretek",
+        "names": ["hálózati ismeretek"]
+    },
+    {
+        "mergeName": "A rendszerfejlesztés technológiája",
+        "names": ["rft"]
+    },
+    {
+        "mergeName": "Önálló labor",
+        "names": ["Önálló labor 1"]
+    },
+    {
+        "mergeName": "Matematika mérnököknek",
+        "names": ["Matematika mérnököknek 1-2"]
+    },
+    {
+        "mergeName": "Egyéb",
+        "names": ["Bev.", "Bevezetés", "Alkalmazott", "Bev elektro", "3", "Labdarúgás", "Tenisz", "ping-pong", "magas", "Digitális", "Számítógép", "Egyiptomi hieroglifák írása és olvasása", "4", "5", "minden", "varázsfloppy programozása", "sötét varázslatok kivédése", "Magas", "matek zh-ra felkészülés", "bármit tanít", "Sprego", "lotus", "undefined", "XX. századi magyar történelem", "Hálózat", "hálózati", "Informatika", "kontrolling", "Informatikai", "programozás", "Programozás", "Ismeretalapú", "Etikett, protokoll 2", "népegészségügy", "Matematika alapjai", "Jelek"]
+    }
+]
