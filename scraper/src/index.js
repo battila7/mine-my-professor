@@ -1,5 +1,5 @@
 const { writeFileSync } = require('fs');
-const { mineSchool, mineTeachers } = require('leadMiner.js');
+const { mineSchool, mineTeachers } = require('./leadMiner');
 
 const options = require('./cli');
 
