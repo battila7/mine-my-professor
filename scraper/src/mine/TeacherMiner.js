@@ -18,7 +18,7 @@ const TeacherMiner = {
         return this.data;
     },
     downloaderOnProgress(page) {
-        const scrapingResults = TeacherScraper(page.contents);
+        const scrapingResults = TeacherScraper.scrape(page.contents);
 
         if (!this.data.overall) {
             this.data.overall = {
