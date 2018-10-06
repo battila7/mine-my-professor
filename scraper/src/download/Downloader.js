@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = {
-    get(uri) {
+    async get(uri) {
         const response = await axios.get(uri);
 
         return {

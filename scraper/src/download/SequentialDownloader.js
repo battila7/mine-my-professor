@@ -20,7 +20,7 @@ const SequentialDownloader = {
 
             this.onProgress(page);
 
-            this.results.push(page);
+            results.push(page);
         } while (this.hasNext(page.contents));
 
         return results;
