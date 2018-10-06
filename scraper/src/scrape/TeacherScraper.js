@@ -53,7 +53,7 @@ function scrapeRatings($) {
 
     const $rows = $('tr', $ratingsTable);
 
-    return RatingScraper($, $rows);
+    return RatingScraper.scrape($, $rows);
 }
 
 module.exports = function scrape(contents) {
