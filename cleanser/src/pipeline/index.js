@@ -1,8 +1,9 @@
 const stages = [
-    'mergeTeachers'
+    'removePrefix',
+    'mergeTeacher'
 ];
 
-function process({options}, initialDataset) {
+function process(options, initialDataset) {
     const stageFunctions = stages.map(name => executeStage.bind(null, name, options.environment, options.stages[name]));
 
     return stageFunctions.reduce(

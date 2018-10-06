@@ -4,7 +4,7 @@ function process(environment,  options, initialDataset) {
     return {
         name: initialDataset.name,
         id: initialDataset.id,
-        techers: initialDataset.teachers.map(prefixRemover)
+        teachers: initialDataset.teachers.map(prefixRemover)
     };
 };
 
