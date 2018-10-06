@@ -17,7 +17,7 @@ const SchoolMiner = {
         return this.data;
     },
     downloaderOnProgress(page) {
-        const scrapingResults = SchoolScraper(page.contents);
+        const scrapingResults = SchoolScraper.scrape(page.contents);
 
         this.data.teachers = this.data.teachers.concat(scrapingResults);
     }
