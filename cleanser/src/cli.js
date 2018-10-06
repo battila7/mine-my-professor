@@ -8,7 +8,7 @@ const argv = require('yargs')
     .describe('denormalizeOutput', 'Path to the denormalized output file.')
     .describe('pretty', 'Pretty-print the otuput.')
     .default('pretty', false)
-    .demandOption([ 'input', 'schoolId', 'datasetOutput' ])
+    .demandOption([ 'input' ])
     .help('h')
     .alias('h', 'help')
     .argv

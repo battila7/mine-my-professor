@@ -8,9 +8,9 @@ const pipeline = require('./pipeline');
     const printer = options.prettyPrint ? prettyPrinter : rawPrinter;
 
     const fileWriter = (path, data) => writeFileSync(path, printer(data));
-    const fileReader = readFileSync;
+    const fileReader = path => JSON.parse(readFileSync(path).toString());
 
-    const dataset = readFileSync(options.inputPath);
+    const dataset = fileReader(options.inputPath);
 
     const pipelineOptions = {
         environment: {
