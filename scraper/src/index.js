@@ -1,33 +1,46 @@
 const { writeFileSync } = require('fs');
-const { mineSchool, mineTeachers } = require('./leadMiner');
+const leadMiner = require('./leadMiner');
 
 const options = require('./cli');
 
 (async function mineMyProfessor(options) {
-    const dataset = await mineDataset(options);
+    const printer = options.prettyPrint ? prettyPrinter : rawPrinter;
 
-    let outputString;
-    if (options.prettyPrint) {
-        outputString = JSON.stringify(dataset, null, 4);
-    }  else {
-        outputString = JSON.stringify(dataset);
+    const schoolData = await mineSchool(options.school);
+
+    if (options.schoolOutputPath) {
+        writeFileSync(options.schoolOutputPath, printer(schoolData));
     }
 
-    writeFileSync(options.outputPath, outputString);
-})(options);
+    const teacherData = await mineTeachers(options.teacherBatchSize, schoolData.teachers);
 
-async function mineDataset({ school, teacherBatchSize }) {
-    console.log('Collecting teacher data...');
-    const schoolData = await mineSchool(options.school);
-    console.log(`${schoolData.teachers.length} teacher entries collected.`);
-
-    const teacherData = await mineTeachers(teacherBatchSize, schoolData.teachers);
-
-    return {
-        name: school.name,
-        id: school.id,
+    const dataset = {
+        name: options.school.name,
+        id: options.school.id,
         teachers: teacherData
     };
+
+    writeFileSync(options.datasetOutputPath, printer(dataset));
+})(options);
+
+function rawPrinter(data) {
+    return JSON.stringify(data);
+}
+
+function prettyPrinter(data) {
+    return JSON.stringify(data, null, 4);
+}
+
+async function mineSchool(school) {
+    console.log('Collecting teacher data...');
+    const schoolData = await leadMiner.mineSchool(school);
+    console.log(`${schoolData.teachers.length} teacher entries collected.`);
+
+    return schoolData;
+}
+
+function mineTeachers(teacherBatchSize, entries) {
+    return leadMiner.mineTeachers(teacherBatchSize, entries);
 }
 
 process.on('unhandledRejection', err => console.log(err));

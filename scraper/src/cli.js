@@ -1,13 +1,13 @@
 const argv = require('yargs')
     .describe('schoolName', 'The name of the school to be scraped.')
     .describe('schoolId', 'The ID of the school to be scraped.')
-    .describe('output', 'Path to the output file.')
+    .describe('datasetOutput', 'Path to the dataset output file.')
+    .describe('schoolOutput', 'Path to the school entry output file.')
     .describe('batchSize', 'The number of parallel teacher downloads.')
     .default('batchSize', 5)
-    .alias('o', 'output')
     .describe('pretty', 'Pretty-print the otuput.')
     .default('pretty', false)
-    .demandOption([ 'schoolName', 'schoolId', 'output' ])
+    .demandOption([ 'schoolName', 'schoolId', 'datasetOutput' ])
     .help('h')
     .alias('h', 'help')
     .argv
@@ -17,7 +17,8 @@ const options = {
         id: argv.schoolId,
         name: argv.schoolName
     },
-    outputPath: argv.output,
+    datasetOutputPath: argv.datasetOutput,
+    schoolOutputPath: argv.schoolOutput,
     teacherBatchSize: argv.batchSize,
     prettyPrint: argv.pretty
 };
