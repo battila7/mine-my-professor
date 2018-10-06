@@ -1,9 +1,11 @@
+const ratingNames = [
+    'requirements',
+    'useful',
+    'helpful',
+    'prepared',
+    'diction'
+];
+
 module.exports = {
-    ratingNames: [
-        'requirements',
-        'useful',
-        'helpful',
-        'prepared',
-        'diction'
-    ]
+    ratingNames
 };
