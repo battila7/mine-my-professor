@@ -9,7 +9,7 @@ const Miner = {
     },
     mine() {
         return this.downloader.downloadAll()
-            .then(() => this.onCompleted());
+            .then(results => this.downloaderOnCompleted(results));
     }
 };
 

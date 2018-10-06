@@ -1,18 +1,11 @@
-const AxiosDownloader = require('../download/AxiosDownloader');
-const SequentialDownloader = require('../download/SequentialDownloader')
+const Miner = require('./Miner');
 const SchoolScraper = require('../scrape/SchoolScraper');
 
 const SchoolMiner = {
-    SchoolMiner(name, id, onProgress) {
+    SchoolMiner(name, id) {
+        this.Miner(`http://www.markmyprofessor.com/iskola/adatlap/${id}.html`)
         this.name = name;
         this.id = id;
-        this.onProgress = onProgress;
-
-        const ad = Object.create(AxiosDownloader);
-        ad.Downloader(`http://www.markmyprofessor.com/iskola/adatlap/${this.id}.html`)
-
-        this.downloader = Object.create(SequentialDownloader);
-        this.downloader.SequentialDownloader(this.downloaderOnProgress.bind(this), ad);
 
         this.data = {
             name,
@@ -20,16 +13,16 @@ const SchoolMiner = {
             teachers: []
         };
     },
-    mine() {
-        return this.downloader.downloadAll()
-            .then(() => this.data);
+    downloaderOnCompleted() {
+        return this.data;
     },
     downloaderOnProgress(page) {
-        console.log(page.index);
         const scrapingResults = SchoolScraper(page.contents);
 
         this.data.teachers = this.data.teachers.concat(scrapingResults);
     }
 };
+
+Object.setPrototypeOf(SchoolMiner, Miner);
 
 module.exports = SchoolMiner;
